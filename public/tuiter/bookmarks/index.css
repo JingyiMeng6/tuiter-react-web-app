@@ -1,0 +1,84 @@
+body {
+  background-color: black;
+  border-color: rgb(47, 51, 54);
+  padding-left: 16px;
+  position: relative;
+  left: 16px
+}
+
+/*border, padding, margin*/
+.wd-padding-16-12 {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px
+}
+.wd-no-top-padding {
+  padding-top: 0px
+}
+.wd-padding-left-60 {
+  padding-left: 60px
+}
+.wd-padding-all-12 {
+  padding: 12px
+}
+.wd-margin-right-12 {
+  margin-right: 12px;
+}
+
+/*font*/
+.wd-font-white {
+  color: white;
+}
+.wd-font-red {
+  color: red;
+}
+.wd-font-size-13 {
+  font-size: 13px;
+}
+.wd-font-size-15 {
+  font-size: 15px;
+}
+.wd-font-size-20 {
+  font-size: 20px;
+}
+.wd-font-bold {
+  font-weight: bold;
+}
+.wd-font-light-gray {
+  color: lightgray;
+}
+
+/*shape*/
+.wd-round-48 {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.wd-max-width-506 {
+  max-width: 506px;
+}
+.wd-shape-504-264 {
+  width:504px;
+  height: 264px;
+}
+
+.wd-rounded-top-corners {
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+/*position*/
+.wd-pos-relative-low-12 {
+  position:relative;
+  top:12px
+ }
+.wd-pos-relative-right-12 {
+  position: relative;
+  right:12px
+}
+
+.wd-grid-col-one-fourth-page {
+  width:25%;
+  float:left
+}

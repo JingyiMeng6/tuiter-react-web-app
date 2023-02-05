@@ -1,0 +1,157 @@
+body {
+  background-color: black;
+  border-color: rgb(47, 51, 54);
+  padding-left: 16px;
+  position: relative;
+  left: 16px
+}
+span {
+  content: "\2699";
+}
+
+
+/*shape*/
+
+.wd-rounded-corners-all-around-small {
+  border-radius: 20px;
+}
+.wd-length-80 {
+  width: 80%
+}
+
+.wd-grid-col-one-sixth-page {
+  width:calc(80%/6);
+  float:left
+}
+
+
+.wd-height-100 {
+  height: 100px;
+}
+
+
+.wd-size-median-square {
+  width: 100px;
+  height: 100px
+}
+
+
+/*color*/
+.wd-bg-color-dark-gray {
+  background-color: darkgray;
+}
+.wd-fg-color-white {
+  color: white;
+}
+.wd-fg-color-highlight {
+  color:rgb(29, 161, 242);
+}
+.wd-fg-color-link {
+  color:rgb(110, 118, 125)
+}
+.wd-bg-color-lightblue {
+  color: lightblue;
+}
+
+
+/*border&margin&padding*/
+.wd-border-none {
+  border: none;
+}
+.wd-margin-none {
+  margin: 0px
+}
+.wd-thin-black-border {
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+}
+
+
+.wd-thick-left-right-padding {
+    padding-right: 20px;
+    padding-left: 20px
+  }
+.wd-thick-left-padding {
+  padding-left: 20px
+}
+
+.wd-thick-top-padding {
+  padding-top: 5px;
+}
+
+.wd-thick-top-bottom-padding {
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
+.wd-border-highlight-blow {
+  border-bottom-style: solid;
+  border-bottom-color: rgb(29,161,242);
+  border-bottom-width: thick;
+}
+
+.wd-padding-around-16 {
+  padding:16px
+}
+
+/*font*/
+.wd-font-size-13 {
+  font-size: 13px;
+}
+.wd-font-size-15 {
+  font-size: 15px
+}
+.wd-font-bold {
+  font-weight:bold;
+}
+.wd-post-topic {
+  font-size: 13px;
+  color: rgb(110, 118, 125)
+}
+
+
+.wd-post-heading {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+/*position*/
+.wd-pos-absolute-right-12 {
+  position: absolute;
+  right: 12px
+}
+.wd-pos-relative {
+  position: relative;
+}
+.wd-pos-relative-low-5 {
+  position: relative;
+  top:5px
+}
+
+.wd-pos-relative-right-40 {
+  position: relative;
+  bottom: 30px;
+  left: 40px;
+}
+
+
+.wd-grid-row {
+  clear: both;
+}
+
+
+.wd-pos-absolute-right-16 {
+  position: absolute;
+  top: 10px;
+  right: 16px
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+/*border*/
+.wd-thin-gray-border {
+  border-style: solid;
+  border-color: rgb(47, 51, 54);
+  border-width: 1px;
+}
+
+/*float*/
+.wd-float-left {
+  float: left;
+}
+.wd-float-done {
+  clear:both
+}
+
+/*shape*/
+.wd-rounded-corners-all-around {
+  border-radius: 20px;
+}
+.wd-size-small-square {
+  width: 17px;
+  height: 17px
+}
+
+/*flex*/
+.wd-text-centered {
+  display:flex;
+  justify-content: center;
+}

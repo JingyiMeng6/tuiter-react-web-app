@@ -184,6 +184,10 @@ a:link {
 .override-bold {
   font-weight: bold;
 }
+.override-list-group-item-primary {
+  background-color: #0d6efd !important;
+  color: white !important;
+}
 
 
 

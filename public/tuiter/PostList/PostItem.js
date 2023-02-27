@@ -1,6 +1,6 @@
 export default function PostItem(post) {
   return(`
-    <li class="list-group-item" href="#">
+    <li class="list-group-item" id="${post.bodyTitle}" href="#">
       <img class="rounded-circle float-start m-0" style="width: 50px;" src="${post.avatarIcon}">
       <!--username, handle, and time-->
       <div class=" ms-4 ">

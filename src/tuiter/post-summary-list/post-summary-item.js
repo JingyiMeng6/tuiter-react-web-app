@@ -2,6 +2,7 @@ import React from "react";
 const PostSummaryItem = (
     {
       post = {
+        "_id": "1" ,
         "topic": "Space",
         "userName": "SpaceX",
         "time": "2h",
@@ -11,7 +12,7 @@ const PostSummaryItem = (
     }
 ) => {
   return(
-      <li className="list-group-item">
+      <li className="list-group-item" id={post._id}>
         <div className="row">
           <div className="col-10">
             <div>{post.userName} . {post.time}</div>

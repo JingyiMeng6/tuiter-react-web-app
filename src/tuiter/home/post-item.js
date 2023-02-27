@@ -1,7 +1,9 @@
 import React from "react";
 
 const PostItem = (
-    {post = { "avatarIcon": "tesla.png",
+    {post = {
+      "id": 888,
+      "avatarIcon": "tesla.png",
       "userName": "Elon Musk",
       "handle": "elonmusk",
       "time": "23h",
@@ -15,7 +17,7 @@ const PostItem = (
     }}
 ) => {
   return(
-      <li className={"list-group-item border-0"}>
+      <li id={post.id} className={"list-group-item border-0"} >
         <div className={"row"}>
           <div className="col-1">
             <img className="rounded-circle" height={48} src={`/images/${post.avatarIcon}`}/>
@@ -31,7 +33,7 @@ const PostItem = (
             <div className="mb-2">{post.summary}</div>
             {/*  post body*/}
             <div className="card border-secondary rounded">
-              <img src={`/images/${post.picture}`} className={"card-img-top"} style={{"max-height":"100%", "width": "auto"}}/>
+              <img src={`/images/${post.picture}`} className={"card-img-top"} style={{"maxHeight":"100%", "width": "auto"}}/>
               {(() => {
                 if (post.bodyTitle === "") {
                   return("");

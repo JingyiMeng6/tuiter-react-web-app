@@ -8,7 +8,7 @@ const TodoItem = (
       }
     }) => {
   return (
-      <li id={todo.id}>
+      <li key={todo.id}>
         <input type="checkbox"
                defaultChecked={todo.done}/>
         {todo.title}

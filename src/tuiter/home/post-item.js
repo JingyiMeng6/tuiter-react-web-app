@@ -2,25 +2,25 @@ import React from "react";
 
 const PostItem = (
     {post = {
-      "id": 888,
-      "avatarIcon": "tesla.png",
-      "userName": "Elon Musk",
-      "handle": "elonmusk",
-      "time": "23h",
-      "summary": "Amazing show about Inspiration4x mission!",
-      "picture": "inspriation4.jpeg",
-      "bodyTitle": "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
-      "body": "From training to landing, this all-access docuseries rides along with the Inspriation4 crew on the first all-cilillian orbital space.",
-      "numComment": "4.2k",
-      "numTuit": "3.5k",
-      "numLike": "37.5k"
+      id: 888,
+      avatarIcon: "tesla.png",
+      userName: "Elon Musk",
+      handle: "elonmusk",
+      time: "23h",
+      summary: "Amazing show about Inspiration4x mission!",
+      picture: "inspriation4.jpeg",
+      bodyTitle: "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
+      body: "From training to landing, this all-access docuseries rides along with the Inspriation4 crew on the first all-cilillian orbital space.",
+      numComment: "4.2k",
+      numTuit: "3.5k",
+      numLike: "37.5k"
     }}
 ) => {
   return(
-      <li id={post.id} className={"list-group-item border-0"} >
+      <li className={"list-group-item border-0"} key={post.id}>
         <div className={"row"}>
           <div className="col-1">
-            <img className="rounded-circle" height={48} src={`/images/${post.avatarIcon}`}/>
+            <img className="rounded-circle" height={48} src={`/images/${post.avatarIcon}`} alt=""/>
           </div>
           <div className="col-10">
             {/*username, handle and time*/}
@@ -33,7 +33,7 @@ const PostItem = (
             <div className="mb-2">{post.summary}</div>
             {/*  post body*/}
             <div className="card border-secondary rounded">
-              <img src={`/images/${post.picture}`} className={"card-img-top"} style={{"maxHeight":"100%", "width": "auto"}}/>
+              <img src={`/images/${post.picture}`} className={"card-img-top"} style={{"maxHeight":"100%", "width": "auto"}} alt=""/>
               {(() => {
                 if (post.bodyTitle === "") {
                   return("");

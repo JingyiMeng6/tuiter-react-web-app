@@ -6,7 +6,8 @@ const HomeComponent = () => {
   return(
       <>
         <ul className={"list-group"}>
-          {posts.map(post => <PostItem post={post}/> )}
+          {posts.map(post => <PostItem key={post.id} post={post}/> )}
+          {/*{posts.map(post => (`${PostItem(post)}`)).join('')}*/}
         </ul>
       </>
   );

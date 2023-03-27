@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch,useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import "../profile/index.css"
 import {changeProfile} from "../reducers/profile-reducer";
@@ -22,7 +22,6 @@ const EditProfileComponent = () => {
     }
     setEditingProfile(newProfile)
   }
-
   const bioChangeHandler = (event)=> {
     const newBio = event.target.value;
     const newProfile = {
@@ -56,26 +55,34 @@ const EditProfileComponent = () => {
     }
     setEditingProfile(newProfile);
   }
-  const saveEditingHandler = (event) => {
-    dispatch(changeProfile(editingProfile));
+
+  const saveHandler = (event)=> {
+    console.log("save")
+    const newProfile = {...editingProfile}
+    dispatch(changeProfile(newProfile))
   }
+
+
   return(
       <>
         <div className="row">
           <div className="col-1">
-            <Link to="/tuiter/profile"><i className="bi bi-x-lg float-end"></i> </Link>
+            <Link to="/tuiter/profile"><i className="bi bi-x-lg"></i> </Link>
           </div>
           <div className={"col-11 "}>
             <span className={"fw-bold"}>Edit profile</span>
-            <button className="btn btn-dark rounded-pill float-end mb-2" onClick={saveEditingHandler}>Save</button>
+            <Link to="/tuiter/profile">
+              <button className="btn btn-dark rounded-pill float-end mb-2" onClick={saveHandler}>Save</button>
+            </Link>
           </div>
         </div>
+
         <img  className={"w-100"} style={{ height: 200 }} src={`/images/${profile.bannerPicture}`}/>
         <img className="rounded-circle position-relative wd-nudge-up"  height={70} src={`/images/react-blue.png`} />
         <ul className={"list-group"}>
           <li className={"list-group-item"}>
             <span className={"text-muted"}>Name</span>
-            <input  onChange={nameChangeHandler} value={editingProfile.firstName +" "+ editingProfile.lastName} className={"form-control border-0 w-100"}/>
+            <input onChange={nameChangeHandler}  value={editingProfile.firstName +" "+ editingProfile.lastName} className={"form-control border-0 w-100"}/>
           </li>
           <li className={"list-group-item"}>
             <span className={"text-muted"}>Bio</span>
@@ -89,21 +96,24 @@ const EditProfileComponent = () => {
             <span className={"text-muted"}>Website</span>
             <input onChange={websiteChangeHandler} value={editingProfile.website} className={"form-control border-0"}/>
           </li>
-
           <li className={"list-group-item"}>
-
             <span className={"text-muted"}>Birth date</span>
             <input onChange={dateOfBirthChangeHandler} value={editingProfile.dateOfBirth} className={"form-control border-0"}/>
-
           </li>
+
+
+
+
+
         </ul>
-        Switch to professional<br/>
-        Editing Profile: {editingProfile.firstName} <br/>
-        Profile in store: {profile.firstName}
-
-
+        <br/>
+        Switch to professional
+        <i className="bi bi-arrow-right-short float-end"></i>
+        <br/>
       </>
-  );
-};
+
+
+  )
+}
 
 export default EditProfileComponent;

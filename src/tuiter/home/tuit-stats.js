@@ -1,33 +1,38 @@
 import React, {useState} from "react";
 import {createTuit} from "../tuits/tuits-reducer";
+import {useDispatch} from "react-redux";
+import {updateTuitThunk} from "../../services/tuits-thunks";
 
 const TuitStats = (
-    {tuitStats = {
-      liked: true,
-      replies: 34,
-      retuits: 34,
-      likes: 34,
-    }}
+    {tuit}
 ) => {
-  let [liked, setLiked] = useState(tuitStats.liked);
-  let [likes, setLikes] = useState(tuitStats.likes);
+  // let [liked, setLiked] = useState(tuit.liked);
+  // let [likes, setLikes] = useState(tuit.likes);
+  const dispatch = useDispatch();
   const likeClickHandler = () => {
-    if (liked) {
-      setLikes(likes - 1);
+    if (tuit.liked) {
+      dispatch(updateTuitThunk({
+        ...tuit,
+        likes: tuit.likes - 1,
+        liked: !tuit.liked
+      }));
     } else {
-      setLikes(likes + 1);
+      dispatch(updateTuitThunk({
+        ...tuit,
+        likes: tuit.likes + 1,
+        liked: !tuit.liked
+      }))
     }
-    setLiked(!liked);
   }
 
   return(
       <div className="row ">
         <div className="col text-muted text-center">
-          <i className="bi bi-chat"></i> {tuitStats.replies}</div>
+          <i className="bi bi-chat"></i> {tuit.replies}</div>
         <div className="col text-muted text-center">
-          <i className="bi bi-arrow-repeat"></i> {tuitStats.retuits}</div>
+          <i className="bi bi-arrow-repeat"></i> {tuit.retuits}</div>
         <div className="col text-muted text-center" onClick={likeClickHandler}>
-          <i className={"bi " + (liked ? 'bi-heart-fill text-danger' : 'bi-heart')}></i> {likes}</div>
+          <i className={"bi " + (tuit.liked ? 'bi-heart-fill text-danger' : 'bi-heart')}></i> {tuit.likes}</div>
         <div className="col text-muted text-center">
           <i className="bi bi-box-arrow-up"></i></div>
       </div>

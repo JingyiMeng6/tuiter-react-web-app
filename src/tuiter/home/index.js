@@ -2,6 +2,7 @@ import React from "react";
 import TuitItem from "./tuit-item";
 import {useSelector} from "react-redux";
 import WhatsHappening from "./whats-happening";
+import TuitsList from "./tuit-list";
 
 
 
@@ -11,10 +12,11 @@ const HomeComponent = () => {
       <>
         <h4>Home</h4>
         <WhatsHappening/>
-        <ul className={"list-group"}>
-          {posts.map(post => <TuitItem key={post._id} post={post}/> )}
+        {/*<ul className={"list-group"}>*/}
+          {/*{posts.map(post => <TuitItem key={post._id} post={post}/> )}*/}
           {/*{posts.map(post => (`${PostItem(post)}`)).join('')}*/}
-        </ul>
+        {/*</ul>*/}
+        <TuitsList/>
       </>
   );
 };

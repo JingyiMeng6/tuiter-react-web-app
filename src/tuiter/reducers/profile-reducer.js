@@ -20,8 +20,24 @@ const profileSlice = createSlice({
   initialState: initialProfile,
   reducers: {
     changeProfile(state, action) {
-      console.log("update profile in the reducer");
-      state = {...action.payload};
+      console.log("updating profile in the reducer");
+      state.firstName = action.payload.firstName;
+      state.lastName = action.payload.lastName;
+      state.handle = action.payload.handle;
+      state.bio = action.payload.bio;
+      state.location = action.payload.location;
+      state.dateOfBirth = action.payload.dateOfBirth;
+
+      // const updatedProfile = action.payload;
+      // console.log("action payload: "+action.payload)
+      // console.log(updatedProfile.firstName);
+      // console.log(updatedProfile.lastName);
+      // state = {...initialProfile,
+      // firstName: updatedProfile.firstName,
+      // lastName: updatedProfile.lastName,
+      // bio: updatedProfile.bio,
+      // website: updatedProfile.website,
+      // dateOfBirth: updatedProfile.dateOfBirth};
       console.log("updated profile firstName is " +state.firstName);
     },
   },

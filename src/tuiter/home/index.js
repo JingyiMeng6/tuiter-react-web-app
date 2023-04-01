@@ -10,7 +10,7 @@ const HomeComponent = () => {
   const posts = useSelector(state => state.tuits)
   return(
       <>
-        <h4>Home</h4>
+        {/*<h4>Home</h4>*/}
         <WhatsHappening/>
         {/*<ul className={"list-group"}>*/}
           {/*{posts.map(post => <TuitItem key={post._id} post={post}/> )}*/}

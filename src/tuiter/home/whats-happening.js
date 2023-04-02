@@ -7,7 +7,11 @@ const WhatsHappening = () => {
   const dispatch = useDispatch();
   const tuitClickHandler = () => {
     const newTuit = {
-      tuit: whatsHappening
+      tuit: whatsHappening,
+      username: "Deadline Hollywood",
+      handle: "DEADLINE",
+      time: "now",
+      image: "ddl-avatar.jpeg"
     }
     dispatch(createTuitThunk(newTuit));
   }
